@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a12e3bce593d944c8a660cc6d78ff92, type: 3}
   m_Name: Luigi
   m_EditorClassIdentifier: 
-  personajeJugable: {fileID: 426580455815693784, guid: 4ee53bc3fc776cd4d8255c31b1de3467, type: 3}
+  personajeJugable: {fileID: 6063322231397344773, guid: f03a185d9254ba54fbef0118ef726725, type: 3}
   imagen: {fileID: 21300000, guid: 725c35e812ee3964585fef54e573d590, type: 3}
   nombre: Luigi
