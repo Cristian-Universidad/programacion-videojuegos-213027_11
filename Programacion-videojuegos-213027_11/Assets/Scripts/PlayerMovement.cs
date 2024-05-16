@@ -59,4 +59,3 @@ public class PlayerMovement : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
     }
 }
-
