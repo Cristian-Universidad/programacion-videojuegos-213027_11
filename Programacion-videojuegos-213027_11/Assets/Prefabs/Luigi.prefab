@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6063322231397344769}
   - component: {fileID: 6063322231397344774}
   - component: {fileID: 6063322231397344775}
-  - component: {fileID: 6063322231397344772}
   - component: {fileID: 6063322231397344771}
-  m_Layer: 0
+  - component: {fileID: 984074745815716377}
+  - component: {fileID: 5601274935656794501}
+  m_Layer: 6
   m_Name: Luigi
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -125,21 +126,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.02932685, y: -0.097756386}
   m_Size: {x: 1.5766276, y: 3.62077}
   m_Direction: 0
---- !u!114 &6063322231397344772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6063322231397344773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05c4ed8d12c75145a651eb29aba4f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 1200
-  saltoSonido: {fileID: 8300000, guid: 913b8b4ddfaa2a848bc961eacdd38e57, type: 3}
 --- !u!95 &6063322231397344771
 Animator:
   serializedVersion: 4
@@ -160,3 +146,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &984074745815716377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063322231397344773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a025fee38260e47ba852fe6bb050e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 5
+  tiempoPerdidaControl: 1000
+--- !u!114 &5601274935656794501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063322231397344773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e88dab97ddff8945a3b18fd702af5ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  JumpForce: 1200
+  sePuedeMover: 1
+  velocidadRebote: {x: 10, y: 10}
+  saltoSonido: {fileID: 8300000, guid: 913b8b4ddfaa2a848bc961eacdd38e57, type: 3}

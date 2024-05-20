@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator Animator;
     private float Horizontal;
     private bool Grounded;
+    public bool sePuedeMover = true;
+    [SerializeField] private Vector2 velocidadRebote;
 
     [SerializeField] private AudioClip saltoSonido;
 
@@ -25,9 +27,9 @@ public class PlayerMovement : MonoBehaviour
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Horizontal < 0.0f)
-            transform.localScale = new Vector3(-0.4898234f, 0.4898234f, 0.4898234f);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else if (Horizontal > 0.0f)
-            transform.localScale = new Vector3(0.4898234f, 0.4898234f, 0.4898234f);
+            transform.localScale = new Vector3(Mathf.Abs (transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
         Animator.SetBool("running", Horizontal != 0.0f);
 
@@ -56,6 +58,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+        if (sePuedeMover)
+        {
+            Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+        }
+        
+    }
+
+    public void Rebote(Vector2 puntoGolpe)
+    {
+        Rigidbody2D.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, velocidadRebote.y);
     }
 }
